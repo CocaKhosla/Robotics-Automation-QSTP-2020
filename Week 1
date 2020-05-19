@@ -1,0 +1,28 @@
+import math
+
+def cartesianPolar():
+    print('Enter x: ')
+    x = float(input())
+    print('Enter y: ')
+    y = float(input())
+    r = x**2 + y**2
+    theta = math.atan(y/x)
+    print('r: '+ str(r) + ' theta: '+ str(theta))
+
+def polarCartesian():
+    print('Enter r: ')
+    r = float(input())
+    print('Enter theta: ')
+    theta = float(input())
+    x = r * math.cos(theta)
+    y = r * math.sin(theta)
+    print('x: ' + str(x) + ' y: '+ str(y))
+
+print('1- Cartesian to polar \n2- Polar to Cartesian\nEnter choice: ')
+choice = int(input())
+if choice == 1:
+    cartesianPolar()
+elif choice == 2:
+    polarCartesian()
+else:
+    print('Incorrect choice')
